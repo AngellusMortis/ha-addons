@@ -13,8 +13,12 @@ options:
   repo: null
   name: ha-runner
   labels: linux,ha
+  workdir: /share/gha-runner
 schema:
   token: password
   repo: url
   name: str
   labels: str
+  workdir: str
+map:
+  - "share:rw"

@@ -19,7 +19,8 @@ RUN \
     && rm -rf /usr/src/*
 
 COPY ./start.sh /start.sh
-RUN chmod +x /start.sh
+RUN chmod +x /start.sh && mkdir -p /data
 
+WORKDIR /data
 ENTRYPOINT []
 CMD /start.sh

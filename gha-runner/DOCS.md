@@ -14,7 +14,7 @@
 
 * `name`: Name for GHA runner (will appear in Settings and workflow logs)
 * `labels`: Comma list of extra labels you want to apply to the runner. Gets `self-hosted` by default.
-* `workdir`: Path where your GHA runner data is stored. Defaults to `/share/gha-runner` which is a folder accessible by Home Assistant. If you would like to change it a folder HA core / other add-ons cannot see use `/data`.
+* `workdir`: Path where your GHA runner data is stored. Defaults to `/share/gha-runner` which is a folder accessible by Home Assistant. If you would like to change it a folder HA core / other add-ons cannot see use `/data/gha-runner`.
 
 ### About Labels
 

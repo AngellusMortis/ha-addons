@@ -19,6 +19,22 @@ function linkDataVolume() {
     ln -s /data /actions-runner
 }
 
+function update() {
+    newBin=$(find . -name "bin.*" -type d)
+    if [[ -n $newBin ]]; then
+        echo "New bin folder found, replacing..."
+        rm ./bin -rf
+        mv $newBin ./bin
+    fi
+
+    newExt=$(find . -name "externals.*" -type d)
+    if [[ -n $newExt ]]; then
+        echo "New externals folder found, replacing..."
+        rm ./externals -rf
+        mv $newExt ./externals
+    fi
+}
+
 if [[ -f "/data/.runner" ]]; then
     if [[ ! -f "/actions-runner/.runner" ]]; then
         linkDataVolume
@@ -29,4 +45,5 @@ else
     linkDataVolume
 fi
 
+update
 /entrypoint.sh ./bin/Runner.Listener run --startuptype service

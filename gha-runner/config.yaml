@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Github Actions Runner
-version: "1"
+version: "2"
 slug: gha-runner
 description: Self-hosted Github Actions Runner to run GHA jobs on
 url: "https://github.com/AngellusMortis/ha-addons/tree/master/gha-runner"

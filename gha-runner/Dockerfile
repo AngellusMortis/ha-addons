@@ -1,4 +1,4 @@
-FROM myoung34/github-runner:ubuntu-bionic
+FROM myoung34/github-runner:ubuntu-focal
 
 ARG BASHIO_VERSION=0.13.1
 RUN \
